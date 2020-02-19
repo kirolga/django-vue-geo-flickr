@@ -17,11 +17,14 @@ cd env/Scripts/activate.bat
 cd ..
 cd ..
 7. pip install -r requirements.txt
-8. Create settings_deploy.py folder in backend/project with the following content:
+8. Create local_settings.py folder in backend/project with the following content:
+``` python
 FLICKR_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' #you may use your own key
 FLICKR_SECRET = 'XXXXXXXXXXXXXXXX' #you should use your own secret
+```
 
 # example of DataBase params (write your own params)
+``` python
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
@@ -32,7 +35,8 @@ DATABASES = {
         'PORT': '5433'
     }
 }
-
-9. python manage.py runserver
+```
+9. python manage.py migrate
+10. python manage.py runserver
 
 
