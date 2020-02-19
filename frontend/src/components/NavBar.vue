@@ -125,8 +125,9 @@ export default {
 }
 img {
   float: left;
-  width: 30%;
+  width: 150px;
   height: 100px;
+  object-fit: cover;
 }
 .media {
   margin-bottom: 15px;
